@@ -1,44 +1,128 @@
+/* ============================
+   REGISTER — ULTRAKILL STYLE
+   ============================ */
+
+main {
+    width: 100%;
+    max-width: 550px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(20, 0, 0, 0.85);
+    border: 3px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 0 40px #ff0000aa;
+    text-align: center;
+}
 
 h2 {
-    text-align:center;
-    color:white;
+    font-size: 48px;
+    color: #ff0000;
+    text-shadow: 0 0 25px #ff0000, 0 0 10px #ff4444;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
 }
 
-
-footer {
-    text-align:center;
+.formulaire-register {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
 }
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding:20px;
+.field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.field label {
+    font-size: 20px;
+    color: #ffdddd;
+    text-shadow: 0 0 10px #ff0000aa;
+    margin-bottom: 8px;
 }
 
-label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    font-size: 16px;
-    text-align:center;
-}
-
-input {
-    width: 100%;
-    height: 42px;
-    padding: 8px 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+.field input {
+    padding: 12px 15px;
+    font-size: 18px;
+    border: 2px solid #ff0000;
+    background: #300000;
+    color: white;
     border-radius: 6px;
-    box-sizing: border-box;
+    outline: none;
+    transition: 0.2s;
+    box-shadow: 0 0 10px #ff000066 inset;
 }
 
-button {
-    text-align:center;
-    background-color:green;
-    color:white;
+.field input:focus {
+    border-color: #ffffff;
+    background: #500000;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+.bouton-inscript {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 22px;
+    background: #8b0000;
+    border: 3px solid #ff0000;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    box-shadow: 0 0 20px #ff0000aa;
+}
+
+.bouton-inscript:hover {
+    background: #ff0000;
+    border-color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #ff0000;
+}
+
+/* Messages d’erreur / succès */
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff6666;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+p.success {
+    color: #66ff66;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+/* ============================
+   LIENS — ULTRAKILL STYLE
+   ============================ */
+
+a {
+    color: #ff4444;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    text-shadow: 0 0 10px #ff0000aa;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 20px #ff0000, 0 0 10px #ff4444;
+    transform: scale(1.05);
+}
+
+/* ============================
+   FOND ULTRAKILL
+   ============================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #300000 0%, #0a0000 70%, #000000 100%);
+    background-attachment: fixed;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
 }

@@ -1,6 +1,6 @@
 <?php
 session_start();
- 
+//Ici on a les paramètres de sécurité et de reconnaissance du mot de passe et du nom d'utilisateur
 include ('./repository/userRepository.php');
 
  

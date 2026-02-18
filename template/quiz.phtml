@@ -1,3 +1,39 @@
-<?php include ('./template/parts/header.phtml'); ?>
+<?php include('./template/parts/header.phtml'); ?>
+<link rel="stylesheet" href="./assets/css/quiz.css" type="text/css" />
 
-<?php include ('./template/parts/footer.phtml'); ?>
+<main class="quiz-container">
+
+    <h1>QUIZ</h1>
+
+    <?php if (!empty($question)): ?>
+
+        <h2 class="question-text">
+            <?= htmlspecialchars($question['question_text']) ?>
+        </h2>
+
+        <form method="post" class="formulaire-quiz">
+
+            <?php foreach ($answers as $ans): ?>
+                <button 
+                    type="submit" 
+                    name="answer_id" 
+                    value="<?= $ans['id'] ?>"
+                    class="quiz-button"
+                >
+                    <?= $ans['possible_answers'] == 1 ? "Oui" : "Non" ?>
+                </button>
+            <?php endforeach; ?>
+
+        </form>
+
+    <?php else: ?>
+
+        <p class="error-message">
+            Erreur : aucune question disponible.
+        </p>
+
+    <?php endif; ?>
+
+</main>
+
+<?php include('./template/parts/footer.phtml'); ?>

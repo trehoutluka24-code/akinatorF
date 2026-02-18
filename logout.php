@@ -1,10 +1,17 @@
 <?php
-
-// On se donne accès à $_SESSION
 session_start();
+//Ici on gère tout ce qui est déconnexion du compte
+function redirectTo(string $path): void
+{
+    header("Location: " . $path);
+    exit;
+}
 
-// On détruit la session
+// On vide la session
+$_SESSION = [];
 session_destroy();
 
-// Redirection vers la page d'accueil
-redirectTo( 'index.php' );
+// On renvoie vers l'accueil
+redirectTo("index.php");
+
+include ('./utilities/functions.php');

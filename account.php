@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+//Ici, on gère la modification des mots de passe des utilisateurs
 include ('./repository/userRepository.php');
 if (!empty($_POST)){
     if (isset($_POST['password-old'], $_POST['password-new'])){

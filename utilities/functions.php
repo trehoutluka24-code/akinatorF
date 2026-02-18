@@ -25,3 +25,8 @@ function startSessionIfIsNot()
         session_start();
     }
 }
+
+function redirectTo(string $path): void { 
+    header("Location: " . $path); exit; 
+    
+}

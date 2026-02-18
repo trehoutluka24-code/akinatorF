@@ -1,5 +1,5 @@
 <?php
-
+//ici on sécurise les mots de passe et email des utilisateurs pour éviter tout injection sql lors de l'inscription d'un utilisateur
 include ('./repository/database.php');
 
 if (!empty($_POST)){
