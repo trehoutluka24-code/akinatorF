@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="./assets/css/register.css" type="text/css" />
+<main id = "register_page" class = "">
+   <h2>Inscription</h2>
+  
+   
+  
+   <form class ="formulaire-register" method="post" action="register.php">
+       <div class="field">
+            <label for="user_name">Nom d'utilisateur :</label>
+            <input type="text" id="user_name" name="user_name" required><br>
+        </div>
+            
+        <div class="field">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br>
+        </div>
+            
+        <div class="field">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required><br>
+        <div>
+            
+             <button type="submit">Register</button>
+        </form>
+    </div>
+</main>
+    
+    <?php if (isset($errors) && !empty($errors)) : ?>
+            <?php foreach ($errors as $error) : ?>
+                <p><?= $error ?></p>
+            <?php endforeach; ?>
+        <?php elseif(isset($errors)): ?>
+            <p> Inscription réussie ! Veuillez appuyer sur le bouton 3WA Tasks pour revenir sur la page d'accueil et allez sur la page login</p>
+        <?php endif; ?>
+<footer>
+    <p>©2024 - 3W Academy - All rights reserved</p>
+</footer>
+
+</body>
+</html>
