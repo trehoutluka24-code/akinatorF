@@ -1,3 +1,5 @@
+<?php include ('./template/parts/header.phtml'); ?>
+
 <link rel="stylesheet" href="./assets/css/register.css" type="text/css" />
 <main id = "register_page" class = "">
    <h2>Inscription</h2>
@@ -30,11 +32,7 @@
                 <p><?= $error ?></p>
             <?php endforeach; ?>
         <?php elseif(isset($errors)): ?>
-            <p> Inscription réussie ! Veuillez appuyer sur le bouton de connexion pour revenir sur la page d'accueil et allez sur la page login</p>
+            <p> Inscription réussie ! Veuillez appuyer sur le bouton accueil pour revenir sur la page d'accueil et allez sur la page de connexion</p>
         <?php endif; ?>
-<footer>
-    <p>©2024 - 3W Academy - All rights reserved</p>
-</footer>
 
-</body>
-</html>
+<?php include ('./template/parts/footer.phtml'); ?>
