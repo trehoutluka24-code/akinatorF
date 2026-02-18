@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Accueil Ultrakill</title>
+    <link rel="stylesheet" href="./assets/css/account.css" type="text/css" />
 </head>
 <body>
-    <h1>Compte</h1>
+    <h2>Historique des parties</h2>
+    
+    
+    <h3>Changer son mot de passe</h3>
+    
+    <p>Votre mot de passe doit contenir entre 8 et 16 lettres, avec au moins une majuscule, une minuscule, 1 chiffre et un caractère spécial</p>
+    
+    <form class="replace-password" method="post" action="account.php">
+        <div class="field">
+            <label for="password">Mot de passe actuel</label>
+            <input type="password" id="password" name="password-old" required><br>
+        </div>
+        
+        <div class="field">
+            <label for="password">Nouveau mot de passe</label>
+            <input type="password" id="password" name="password-new" required><br>
+        </div>
+            <button class="bouton-inscript" type="submit">Register</button>
+    </form>
+    <?php if(isset($error)): ?>
+    <p><?=$error?></p>
+    <?php endif; ?>
 </body>
 </html>
